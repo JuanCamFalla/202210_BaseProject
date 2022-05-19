@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { Banda } from './banda';
+import { Banda } from './bandas';
 import { BandaDetail } from './banda-detail';
 
 @Injectable({

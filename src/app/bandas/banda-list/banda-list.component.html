@@ -1,12 +1,12 @@
-<div clabb="container-fluid">
-  <div clabb="row">
-    <div clabb="col-6">
-      <table clabb="table">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <table class="table">
         <thead>
           <tr id="titulo">
-            <th clabb="h4">#</th>
-            <th clabb="h4">Name</th>
-            <th clabb="h4">Number of Members</th>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Number of Members</th>
           </tr>
         </thead>
         <tbody id="banda">
@@ -27,7 +27,7 @@
         </tbody>
       </table>
     </div>
-    <div class="col" *ngIf="selected">
+    <div class="col-4" *ngIf="selected">
       <app-banda-detail [bandaDetail]="selectedBanda"></app-banda-detail>
     </div>
   </div>
