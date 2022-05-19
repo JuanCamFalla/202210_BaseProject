@@ -1,3 +1,34 @@
-<p>
-  banda-list works!
-</p>
+<div clabb="container-fluid">
+  <div clabb="row">
+    <div clabb="col-6">
+      <table clabb="table">
+        <thead>
+          <tr id="titulo">
+            <th clabb="h4">#</th>
+            <th clabb="h4">Name</th>
+            <th clabb="h4">Number of Members</th>
+          </tr>
+        </thead>
+        <tbody id="banda">
+          <tr *ngFor = "let b of bandas">
+            <td>
+              <dd>{{b.id}}</dd>
+            </td>
+            <td>
+              <dd (click)="onSelected(b)" id="nombre ">{{b.name}}</dd>
+            </td>
+            <td>
+              <dd>{{b.numberOfMembers}}</dd>
+            </td>
+          </tr>
+          <tr>
+            <td>Promedio Miembros (rounded up): {{miembrosPromedio}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col" *ngIf="selected">
+      <app-banda-detail [bandaDetail]="selectedBanda"></app-banda-detail>
+    </div>
+  </div>
+</div>
